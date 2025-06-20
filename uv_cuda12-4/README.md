@@ -102,4 +102,3 @@ uv add torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://do
 - [uv公式ドキュメント](https://docs.astral.sh/uv/)
 - [NVIDIA CUDA Docker Hub](https://hub.docker.com/r/nvidia/cuda)
 - [PyTorch公式インストールガイド](https://pytorch.org/get-started/locally/)
-- [PyTorch CUDA Wheels](https://download.pytorch.org/whl/torch/)
