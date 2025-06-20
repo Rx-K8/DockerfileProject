@@ -28,14 +28,21 @@ docker build -t uv-cuda12-4 .
 # 基本的な実行
 docker run -it --gpus all uv-cuda12-4 bash
 
+# コンテナ名を指定して実行
+docker run -it --gpus all --name my-uv-cuda-container uv-cuda12-4 bash
+
 # ボリュームマウントありで実行
 docker run -it --gpus all -v $(pwd):/workspace uv-cuda12-4 bash
+
+# コンテナ名とボリュームマウントを同時に指定
+docker run -it --gpus all --name my-uv-cuda-container -v $(pwd):/workspace uv-cuda12-4 bash
 ```
 
 **オプション解説:**
 - `-i`: インタラクティブモード（標準入力を開いたままにする）
 - `-t`: 疑似TTYを割り当て（ターミナル環境を提供）
 - `--gpus all`: ホストのすべてのGPUをコンテナで利用可能にする
+- `--name my-uv-cuda-container`: コンテナに `my-uv-cuda-container` という名前を付ける
 - `-v $(pwd):/workspace`: 現在のディレクトリを `/workspace` としてコンテナ内にマウント
 - `uv-cuda12-4`: 使用するイメージ名
 - `bash`: コンテナ起動時に実行するコマンド
