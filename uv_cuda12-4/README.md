@@ -87,10 +87,8 @@ uv add torch==2.6.0 torchvision==0.21.0 torchaudio==2.6.0 --index-url https://do
 ```
 
 **CUDA対応版インストールのポイント:**
-- CUDA 12.4環境ではCUDA 12.1対応版（`+cu121`）を使用
+- CUDA 12.4環境ではCUDA 12.4対応版（`+cu124`）を使用
 - `--index-url`でPyTorchの公式CUDAリポジトリを指定
-- CUDA 12.1対応版はCUDA 12.4と互換性があります
-- CPU版のみが必要な場合は通常の`uv add torch`でOK
 
 ## 注意事項
 
