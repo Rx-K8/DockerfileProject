@@ -50,6 +50,7 @@ docker build \
 
 ```bash
 docker run -it --gpus all \
+  --name <コンテナ名>
   -v <ホストパス>:<コンテナパス> \
   <イメージ名> <コマンド>
 ```
@@ -58,10 +59,11 @@ docker run -it --gpus all \
 
 ```bash
 docker run -it --gpus all \
+  --name miyalab_container \
   -v $(pwd):/workspace \
   -v "${HOME}/.cache/huggingface":/root/.cache/huggingface \
   -w /workspace \
-  miyalab/cuda:12.4.1-cudnn-devel-ubuntu22.04 bash
+  miyalab/cuda-uv:12.4.1-cudnn-devel-ubuntu22.04 bash
 ```
 
 ## 📋 ベースイメージ一覧
