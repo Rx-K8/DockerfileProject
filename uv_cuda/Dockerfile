@@ -8,13 +8,13 @@ RUN { \
   } >> ${HOME}/.bashrc
 
 RUN  apt-get update && apt-get install -y \
-    locales-all \
-    language-pack-ja-base \
-    curl \
-    wget \
-    zip \
-    unzip \
-    git \
-    && apt-get clean
+  locales-all \
+  language-pack-ja-base \
+  curl \
+  wget \
+  zip \
+  unzip \
+  git \
+  && apt-get clean
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
